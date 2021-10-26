@@ -12,7 +12,7 @@ class BeatsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create beat" do
     assert_difference('Beat.count') do
-      post beats_url, params: { beat: { artist: @beat.artist, producer: @beat.producer, song: @beat.song, video: @beat.video } }, as: :json
+      post beats_url, params: { beat: { artist: @beat.artist, media: @beat.media, producer: @beat.producer, song: @beat.song } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class BeatsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update beat" do
-    patch beat_url(@beat), params: { beat: { artist: @beat.artist, producer: @beat.producer, song: @beat.song, video: @beat.video } }, as: :json
+    patch beat_url(@beat), params: { beat: { artist: @beat.artist, media: @beat.media, producer: @beat.producer, song: @beat.song } }, as: :json
     assert_response 200
   end
 

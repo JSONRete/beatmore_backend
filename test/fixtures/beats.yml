@@ -4,10 +4,10 @@ one:
   artist: MyString
   song: MyString
   producer: MyString
-  video: MyString
+  media: MyString
 
 two:
   artist: MyString
   song: MyString
   producer: MyString
-  video: MyString
+  media: MyString

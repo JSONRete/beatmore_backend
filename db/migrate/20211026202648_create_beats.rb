@@ -4,7 +4,7 @@ class CreateBeats < ActiveRecord::Migration[6.1]
       t.string :artist
       t.string :song
       t.string :producer
-      t.string :video
+      t.string :media
 
       t.timestamps
     end
