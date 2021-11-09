@@ -1,25 +1,49 @@
-# README
+# Production Information - Creation Tool
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Production Information - Creation Tool** is a _Single Page Application_ with the backend built with _Ruby on Rails_ which is representative of the models and controllers of the MVC software design pattern. This _SPA_ handles the views of the application with _JavaScript_, _HTML_, & _CSS_. **Production Information - Creation Tool** allows you to generate and save important information about your production in conjunction with what creation tool was used to create it.
 
-Things you may want to cover:
+## Installing / Getting started
 
-* Ruby version
+`For:` [Backend](https://github.com/JSONRete/pict_backend_api)
 
-* System dependencies
+Run following from terminal:
+```
+- bundle install
+- rails db:create
+- rails db:migrate
+- rails db:seed
+- rails server
+```
+---
+`For:` [Frontend](https://github.com/JSONRete/pict_frontend)
 
-* Configuration
+With the backend server running, from the frontend open `index.html` in your preferred web browser. 
 
-* Database creation
+## Usage
 
-* Database initialization
+This _Single Page Application_ will function on a local server simulating an online experience. Use the Ruby on Rails Server or your preferred environment and web browser to accomplish this.
+[Rails Server](https://guides.rubyonrails.org/getting_started.html)
 
-* How to run the test suite
+### Built With
 
-* Services (job queues, cache servers, search engines, etc.)
+Ruby on Rails, Ruby, Active Record, Html, CSS, JavaScript
 
-* Deployment instructions
+### Prerequisites
+```ruby
+Ruby
+```
+```google chrome
+Google Chrome
+```
 
-* ...
-# beatmore_backend
+## Version
+
+**0.1.0**
+
+## Contributors
+
+- JaSON Rete
+
+## Licensing
+
+This application is licensed under the [MIT License](LICENSE).
