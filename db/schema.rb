@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_26_202648) do
+ActiveRecord::Schema.define(version: 2021_11_26_045201) do
 
   create_table "beats", force: :cascade do |t|
     t.string "artist"
     t.string "song"
     t.string "producer"
     t.string "media"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "producers", force: :cascade do |t|
+    t.string "name"
+    t.integer "raiting"
+    t.string "search"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
