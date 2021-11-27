@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_11_26_045201) do
 
   create_table "producers", force: :cascade do |t|
     t.string "name"
-    t.integer "raiting"
+    t.integer "rating"
     t.string "search"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
