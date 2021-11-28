@@ -46,6 +46,6 @@ class BeatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def beat_params
-      params.require(:beat).permit(:artist, :song, :producer, :media)
+      params.require(:beat).permit(:artist, :song, :producer, :media, :producer_id)
     end
 end
