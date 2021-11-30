@@ -12,7 +12,7 @@ class ProducersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create producer" do
     assert_difference('Producer.count') do
-      post producers_url, params: { producer: { name: @producer.name, rating: @producer.rating, search: @producer.search } }, as: :json
+      post producers_url, params: { producer: { area: @producer.area, begin_area: @producer.begin_area, birthday: @producer.birthday, gender: @producer.gender, name: @producer.name } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class ProducersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update producer" do
-    patch producer_url(@producer), params: { producer: { name: @producer.name, rating: @producer.rating, search: @producer.search } }, as: :json
+    patch producer_url(@producer), params: { producer: { area: @producer.area, begin_area: @producer.begin_area, birthday: @producer.birthday, gender: @producer.gender, name: @producer.name } }, as: :json
     assert_response 200
   end
 

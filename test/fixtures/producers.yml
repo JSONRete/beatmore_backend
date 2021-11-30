@@ -2,10 +2,14 @@
 
 one:
   name: MyString
-  rating: 
-  search: MyString
+  gender: MyString
+  begin_area: MyString
+  area: MyString
+  birthday: MyString
 
 two:
   name: MyString
-  rating: 
-  search: MyString
+  gender: MyString
+  begin_area: MyString
+  area: MyString
+  birthday: MyString

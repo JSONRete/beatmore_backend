@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_26_045201) do
+ActiveRecord::Schema.define(version: 2021_11_30_180426) do
 
   create_table "beats", force: :cascade do |t|
     t.string "artist"
@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(version: 2021_11_26_045201) do
 
   create_table "producers", force: :cascade do |t|
     t.string "name"
-    t.integer "rating"
-    t.string "search"
+    t.string "gender"
+    t.string "begin_area"
+    t.string "area"
+    t.string "birthday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
