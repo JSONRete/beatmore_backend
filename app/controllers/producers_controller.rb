@@ -33,6 +33,13 @@ class ProducersController < ApplicationController
     end
   end
 
+  def create_prod 
+    hash_data = MusicBrainz::Artist.search("Jet")
+    binding.pry
+  end
+
+  
+
   # DELETE /producers/1
   def destroy
     @producer.destroy
