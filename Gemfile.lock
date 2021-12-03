@@ -93,6 +93,8 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_xml (0.6.0)
+    musicbrainz (0.5.2)
+      nokogiri
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
@@ -162,6 +164,7 @@ DEPENDENCIES
   byebug
   httparty
   listen (~> 3.3)
+  musicbrainz (= 0.5.2)
   pry
   puma (~> 5.0)
   rack-cors
