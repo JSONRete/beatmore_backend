@@ -33,16 +33,14 @@ class ProducersController < ApplicationController
     end
   end
 
-  def create_prod 
-    hash_data = MusicBrainz::Artist.search("Jet")
-    binding.pry
-  end
-
-  
-
   # DELETE /producers/1
   def destroy
     @producer.destroy
+  end
+
+  def create_prod 
+    hash_data = MusicBrainz::Artist.search("Jet")
+    binding.pry
   end
 
   private
@@ -53,6 +51,6 @@ class ProducersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def producer_params
-      params.require(:producer).permit(:name, :gender, :begin_area, :area, :birthday)
+      params.require(:producer).permit(:name, :raiting, :begin_area, :area, :birthday)
     end
 end
