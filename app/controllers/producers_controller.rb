@@ -39,7 +39,7 @@ class ProducersController < ApplicationController
   end
 
   def create_prod 
-    hash_data = MusicBrainz::Artist.search("Jet")
+    hash_data = MusicBrainz::Artist.search(name)
     binding.pry
   end
 
