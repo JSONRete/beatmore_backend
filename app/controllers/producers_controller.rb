@@ -39,9 +39,21 @@ class ProducersController < ApplicationController
   end
 
   def create_prod 
-    hash_data = MusicBrainz::Artist.search(name)
-    binding.pry
+    data = HTTParty.get('https://musicbrainz.org/ws/2/artist?query=kanye-west&fmt=json&limit=1', {
+      headers: {"User-Agent" => "Httparty"},
+      debug_output: STDOUT, # To show that User-Agent is Httparty
+    })
+
+    render json: data
+  
   end
+  # def create_prod 
+  #   hash_data = MusicBrainz::Artist.search(name)
+  #   binding.pry
+  # end
+
+  # hashData = MusicBranz
+	# Producer.create(name: hash_data[“name”], …, …, …, )
 
   private
     # Use callbacks to share common setup or constraints between actions.
