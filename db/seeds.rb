@@ -28,10 +28,10 @@
 # data = HTTParty.get('https://musicbrainz.org/ws/2/artist?query=kanye-west&fmt=json&limit=1?token=Swv62vvxcUNH0vOdLDTTJzIXokR4HQvwIdkFI3xJ')
 # http://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?inc=aliases
 
-# data = HTTParty.get('https://musicbrainz.org/ws/2/artist?query=kanye-west&fmt=json&limit=1', {
-#     headers: {"User-Agent" => "Httparty"},
-#     debug_output: STDOUT, # To show that User-Agent is Httparty
-#   })
+data = HTTParty.get('https://musicbrainz.org/ws/2/artist?query=kanye-west&fmt=json&limit=1', {
+    headers: {"User-Agent" => "Httparty"},
+    debug_output: STDOUT, # To show that User-Agent is Httparty
+  })
 
 # MusicBrainz.configure do |c|
 #   # Application identity (required)
@@ -51,7 +51,9 @@
 # require 'musicbrainz'
 
 # Search for artists
-# @suggestions = MusicBrainz::Artist.search("Jet")
+# @suggestions = MusicBrainz::Artist.search("Kanye West")
+# @suggestions = MusicBrainz::Artist.find_by_name("Madlib")
+# MusicBrainz::Artist.find_by_name(name)
 
 # Find artist by name or mbid
 # @foo_fighters = MusicBrainz::Artist.find_by_name("Foo Fighters")
@@ -61,4 +63,4 @@
 # @empire_tracks = @kasabian.release_groups[8].releases.first.tracks
 
 
-# binding.pry
+binding.pry
