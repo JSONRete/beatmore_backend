@@ -38,8 +38,9 @@ class ProducersController < ApplicationController
     @producer.destroy
   end
 
-  def create_prod 
-    data = HTTParty.get('https://musicbrainz.org/ws/2/artist?query=kanye-west&fmt=json&limit=1', {
+  def create_prod
+    name = params[:search]
+    data = HTTParty.get("https://musicbrainz.org/ws/2/artist?query=#{name}&fmt=json&limit=1", {
       headers: {"User-Agent" => "Httparty"},
       debug_output: STDOUT, # To show that User-Agent is Httparty
     })
