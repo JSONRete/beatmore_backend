@@ -23,9 +23,8 @@ ActiveRecord::Schema.define(version: 2021_11_30_180426) do
 
   create_table "producers", force: :cascade do |t|
     t.string "name"
-    t.string "gender"
+    t.string "legal_name"
     t.string "begin_area"
-    t.string "area"
     t.string "birthday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
