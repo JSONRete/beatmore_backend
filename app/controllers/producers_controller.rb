@@ -40,13 +40,26 @@ class ProducersController < ApplicationController
 
   def create_prod
     name = params[:search]
+    # data = HTTParty.get("https://musicbrainz.org/ws/2/artist?query=#{name}&fmt=json&limit=1", {
+    #   headers: {"User-Agent" => "Httparty"},
+    #   debug_output: STDOUT, # To show that User-Agent is Httparty
+    # })
+
     data = HTTParty.get("https://musicbrainz.org/ws/2/artist?query=#{name}&fmt=json&limit=1", {
       headers: {"User-Agent" => "Httparty"},
       debug_output: STDOUT, # To show that User-Agent is Httparty
     })
 
-    render json: data
-  
+
+      hash = {
+        name: data['artists'][0]['name'],
+        legal_name: data['artists'][0]['aliases'][1]['name'],
+        begin_area: data['artists'][0]['begin-area']['name'],
+        birthday: data['artists'][0]['aliases'][0]['begin-date']
+
+      }
+    producer = Producer.create(hash)
+    render json: producer
   end
   # def create_prod 
   #   hash_data = MusicBrainz::Artist.search(name)
