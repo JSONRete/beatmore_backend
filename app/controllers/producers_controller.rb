@@ -54,13 +54,6 @@ class ProducersController < ApplicationController
     producer = Producer.create(hash)
     render json: producer
   end
-  # def create_prod 
-  #   hash_data = MusicBrainz::Artist.search(name)
-  #   binding.pry
-  # end
-
-  # hashData = MusicBranz
-	# Producer.create(name: hash_data[“name”], …, …, …, )
 
   private
     # Use callbacks to share common setup or constraints between actions.
