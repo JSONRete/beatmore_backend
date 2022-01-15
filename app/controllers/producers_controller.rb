@@ -44,12 +44,11 @@ class ProducersController < ApplicationController
       headers: {"User-Agent" => "Httparty"},
       debug_output: STDOUT, # To show that User-Agent is Httparty
     })
-      hash = {
-        name: data['artists'][0]['name'],
-        legal_name: data['artists'][0]['aliases'][1]['name'],
-        begin_area: data['artists'][0]['begin-area']['name'],
-        birthday: data['artists'][0]['aliases'][0]['begin-date']
-
+    hash = {
+      name: data['artists'][0]['name'],
+      legal_name: data['artists'][0]['aliases'][1]['name'],
+      begin_area: data['artists'][0]['begin-area']['name'],
+      birthday: data['artists'][0]['aliases'][0]['begin-date']
       }
     producer = Producer.create(hash)
     render json: producer
