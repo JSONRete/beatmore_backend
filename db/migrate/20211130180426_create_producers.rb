@@ -5,7 +5,6 @@ class CreateProducers < ActiveRecord::Migration[6.1]
       t.string :legal_name
       t.string :begin_area
       t.string :birthday
-
       t.timestamps
     end
   end
