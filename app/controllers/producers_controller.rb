@@ -49,7 +49,7 @@ class ProducersController < ApplicationController
       legal_name: data['artists'][0]['aliases'][1]['name'],
       begin_area: data['artists'][0]['begin-area']['name'],
       birthday: data['artists'][0]['aliases'][0]['begin-date']
-      }
+    }
     producer = Producer.create(hash)
     render json: producer
   end
